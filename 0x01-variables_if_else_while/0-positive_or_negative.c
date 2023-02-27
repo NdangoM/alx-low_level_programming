@@ -3,9 +3,7 @@
 #include < stdio.h>
 /**
  * main - Entry point
- *
  * Description: 'the program's description'
- *
  * return: always 0
  */
 int main(void)
