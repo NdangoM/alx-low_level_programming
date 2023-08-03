@@ -9,23 +9,23 @@
 
 int _sqrt_recursion(int n)
 {
-        return (_sqrt_recursion(n, 1));
+	if (n < 0)
+		return (-1);
+        return (test_sqrt(n, 0));
 }
 
 /**
- * _sqrt - calcutes the square root
+ * test_sqrt - calcutes the square root
  * @n: the integer to calculate the square root
  * @i: number to repeat
  * Return: a square root
  */
 
-int _sqrt(int n, int i)
+int test_sqrt(int n, int i)
 {
-        if (n < 0)
-                return (-1);
-        if ((i * i) > n)
+        if (i * i > n)
                 return (-1);
         if (i * i == n)
                 return (i);
-        return (_sqrt(n, i + 1));
-}}
+        return (test_sqrt(n, i + 1));
+}
