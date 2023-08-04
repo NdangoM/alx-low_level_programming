@@ -2,20 +2,19 @@
 
 /**
  * void _puts_recursion - Print string
- *
+ *@s: write a string
  * Return nothing.
  */
 
 void _puts_recursion(char *s)
 {
-	/*Base code*/
-	if (*s != '\0') 
+	if (*s)
 	{
 		_putchar(*s);
+		_puts_recursion(s + 1);
 		}
 	else 
 	{
-	_puts_recursion(s+1);
 	_putchar('\n');
 	}
 }
