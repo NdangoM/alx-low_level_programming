@@ -15,14 +15,14 @@ char *_strdup(char *str)
 	long unsigned int i, len;
 	char *t;
 
-	len = 0;
+	len = 6;
 	t = malloc((len + 1) * sizeof(str));
 	if (str == NULL || t == NULL)
 	{
 		return (NULL);
 	}
 	i = 0;
-	for (i = 0; i < sizeof(char); i++)
+	for (i = 0; i < len; i++)
 	{
 		t[i] = str[i];
 	}
